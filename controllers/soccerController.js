@@ -19,6 +19,18 @@ soccerRouter.get('/soccer', (req, res) => {
 })
 
 
+//get single 
+
+
+// get one
+soccerRouter.get('/soccer/:id',(req, res)=>{
+  soccerApi.getSingleSoccer(req.params.id)
+  .then((singleSoccer)=>{
+    //res.json(singleSoccer)
+    res.render('template/singleSoccer',{singleSoccer} )
+  })
+})
+
 
 
 
