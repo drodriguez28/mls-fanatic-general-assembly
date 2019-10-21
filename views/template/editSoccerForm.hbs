@@ -1,0 +1,16 @@
+<h1>Edit Fan</h1>
+
+
+{{!-- <form method="PUT" action="/issue/{{singleIssue._id}}"> --}}
+
+<form action="/soccer/{{singleSoccer._id}}?_method=PUT" method="POST">
+
+<input type="text" name="name" placeholder="name" value="{{singleSoccer.name}}"/>
+<input type="number" name="age" placeholder="age" value="{{singleSoccer.age}}"/>
+<input type="text" name="status" placeholder="city" value="{{singleSoccer.city}}"/>
+<input type="text" name="club" placeholder="club" value="{{singleSoccer.club}}"/>
+
+
+
+<input type="submit" value="Save"/>
+</form>

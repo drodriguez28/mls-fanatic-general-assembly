@@ -4,9 +4,10 @@ const mongoose = require('./connection.js')
 
 const SoccerSchema = new mongoose.Schema({
   name: String,
+  age: Number,
   city: String,
-  club: String,
-  age: Number
+  club: String
+
 
 })
 

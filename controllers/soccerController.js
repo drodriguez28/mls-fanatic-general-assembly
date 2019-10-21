@@ -28,8 +28,8 @@ soccerRouter.get('/soccer/edit/:id',(req, res) =>{
 
 soccerRouter.get('/soccer', (req, res) => {
   soccerApi.getAllSoccers()
-  .then((getAllSoccers)=>{
-    console.log(getAllSoccers)
+  .then((allSoccers)=>{
+    console.log(allSoccers)
     //res.json(allSoccers)
     res.render('template/allSoccers',{AllSoccers})
   })
