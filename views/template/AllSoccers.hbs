@@ -1,0 +1,12 @@
+<h1>MLS Fanatic Site</h1>
+<a href="/soccer/new">
+    <button> create 
+
+    </button>
+
+</a>
+{{#each allSoccers}}
+<a href="/soccer/{{_id}}">
+    <p>{{description}}</p>
+</a>
+{{/each}}

@@ -3,23 +3,23 @@ const mongoose = require('./connection.js')
 
 
 const SoccerSchema = new mongoose.Schema({
- name: String,
- city: String,
- club: String,
- age: Number
+  name: String,
+  city: String,
+  club: String,
+  age: Number
 
 })
 
 const SoccerCollection = mongoose.model('Soccer', SoccerSchema)
 
 //get all 
-const getAllSoccer = ()=>{
+const getAllSoccer = () => {
   return SoccerCollection.find({})
 }
 
 //get one
-const getSingleSoccer = (id) =>{
-  return SoccerCollection.findById({id})
+const getSingleSoccer = (id) => {
+  return SoccerCollection.findById({ id })
 }
 
 // create
@@ -35,9 +35,9 @@ const updateSoccer = (id, soccerData) => {
 
 
 //delete
-  const deleteSoccer = (id) => {
-    return SoccerCollection.deleteOne({_id: id})
-  }
+const deleteSoccer = (id) => {
+  return SoccerCollection.deleteOne({ _id: id })
+}
 
 
 
