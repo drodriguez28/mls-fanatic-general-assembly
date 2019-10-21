@@ -2,12 +2,23 @@
 const express = require('express')
 
 
-const templateApi = require('../models/soccerModel.js')
+const soccerApi = require('../models/soccerModel.js')
 
 
 const soccerRouter = express.Router()
 
+//create brother (this makes the create Soccer page)
+soccerRouter.get('/soccer/new',(req, res) =>{
+  res.render('template/createSoccerForm')
+})
 
+// update brother (this makes the update Soccer)
+soccerRouter.get('/soccer/edit/:id',(req, res) =>{
+  soccerApi.getSingleSoccer(req.params.id)
+  .then((singleSoccer)=> {
+    res.render('template/editSoccerForm', {singleSoccer})
+  })
+})
 
 
 
