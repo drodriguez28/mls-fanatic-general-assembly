@@ -2,7 +2,7 @@ const mongoose = require('./connection.js')
 
 
 
-const soccerSchema = new mongoose.Schema({
+const SoccerSchema = new mongoose.Schema({
  name: String,
  city: String,
  club: String,
@@ -10,10 +10,50 @@ const soccerSchema = new mongoose.Schema({
 
 })
 
+const SoccerCollection = mongoose.model('Soccer', SoccerSchema)
+
+//get all 
+const getAllSoccer = ()=>{
+  return SoccerCollection.find({})
+}
+
+//get one
+const getSingleSoccer = (id) =>{
+  return SoccerCollection.findById({id})
+}
+
+// create
+const createSoccer = (soccerData) => {
+  return SoccerCollection.create(soccerData)
+}
+
+// updates
+const updateSoccer = (id, soccerData) => {
+  return SoccerCollection.updateOne({ _id: id }, soccerData)
+
+}
+
+
+//delete
+  const deleteSoccer = (id) => {
+    return SoccerCollection.deleteOne({_id: id})
+  }
+
+
+
+
+
+
+
+
 
 
 
 
 module.exports = {
-  getHelloWorldString
+  getAllSoccer,
+  getSingleSoccer,
+  createSoccer,
+  updateSoccer,
+  deleteSoccer
 }
