@@ -14,7 +14,7 @@ const SoccerSchema = new mongoose.Schema({
 const SoccerCollection = mongoose.model('Soccer', SoccerSchema)
 
 //get all 
-const getAllSoccer = () => {
+const getAllSoccers = () => {
   return SoccerCollection.find({})
 }
 
@@ -52,7 +52,7 @@ const deleteSoccer = (id) => {
 
 
 module.exports = {
-  getAllSoccer,
+  getAllSoccers,
   getSingleSoccer,
   createSoccer,
   updateSoccer,
