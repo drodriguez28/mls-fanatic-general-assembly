@@ -1,7 +1,12 @@
 <h1>Pick up games around your city!</h1>
 
 
-<a href="/location">
+<a href="/location/new">
     
-
+<button>create pickup game</button>
 </a>
+{{#each allLocations}}
+<a href="/location/{{_id}}">
+    <p>{{park}}</p>
+</a>
+{{/each}}

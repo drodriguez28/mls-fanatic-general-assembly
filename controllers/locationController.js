@@ -40,10 +40,10 @@ locationRouter.get('/location/:id', (req, res) => {
   })
 
 // create location 
-locationRouter.post('/location', (req, res) => {
+locationRouter.post('/', (req, res) => {
     locationApi.createLocation(req.body)
       .then((createdLocation) => {
-        //res.json(createdLocation)
+        // res.json(createdLocation)
         res.redirect('/location')
   
       })
