@@ -8,16 +8,16 @@ const soccerApi = require('../models/soccerModel.js')
 const soccerRouter = express.Router()
 
 //create brother (this makes the create Soccer page)
-soccerRouter.get('/soccer/new',(req, res) =>{
+soccerRouter.get('/soccer/new', (req, res) => {
   res.render('template/createSoccerForm')
 })
 
 // update brother (this makes the update Soccer)
-soccerRouter.get('/soccer/edit/:id',(req, res) =>{
+soccerRouter.get('/soccer/edit/:id', (req, res) => {
   soccerApi.getSingleSoccer(req.params.id)
-  .then((singleSoccer)=> {
-    res.render('template/editSoccerForm', {singleSoccer})
-  })
+    .then((singleSoccer) => {
+      res.render('template/editSoccerForm', { singleSoccer })
+    })
 })
 
 
@@ -28,36 +28,39 @@ soccerRouter.get('/soccer/edit/:id',(req, res) =>{
 
 soccerRouter.get('/soccer', (req, res) => {
   soccerApi.getAllSoccers()
-  .then((allSoccers)=>{
-    console.log(allSoccers)
-    //res.json(allSoccers)
-    res.render('template/allSoccers',{allSoccers})
-  })
+    .then((allSoccers) => {
+      console.log(allSoccers)
+      //res.json(allSoccers)
+      res.render('template/allSoccers', { allSoccers })
+    })
 })
 
 
 
 // get one
-soccerRouter.get('/soccer/:id',(req, res)=>{
+soccerRouter.get('/soccer/:id', (req, res) => {
   soccerApi.getSingleSoccer(req.params.id)
-  .then((singleSoccer)=>{
-    //res.json(singleSoccer)
-    res.render('template/singleSoccer',{singleSoccer} )
-  })
+    .then((singleSoccer) => {
+      // res.json(singleSoccer)
+      res.render('template/singleSoccer', { singleSoccer })
+    })
+    .catch((err) => {
+      res.send(err)
+    })
 })
 
 
 
 // create soccer 
-soccerRouter.post('/soccer', (req, res)=>{
+soccerRouter.post('/soccer', (req, res) => {
   soccerApi.createSoccer(req.body)
-  .then((createdSoccer)=>{
-    //res.json(createdSoccer)
-    res.redirect('/soccer')
+    .then((createdSoccer) => {
+      //res.json(createdSoccer)
+      res.redirect('/soccer')
 
-  })
+    })
 })
-soccerRouter.get('/soccer/new',(req, res) =>{
+soccerRouter.get('/soccer/new', (req, res) => {
   res.render('template/createSoccerForm')
 })
 

@@ -20,7 +20,7 @@ const getAllSoccers = () => {
 
 //get one
 const getSingleSoccer = (id) => {
-  return SoccerCollection.findById({ id })
+  return SoccerCollection.findById(id)
 }
 
 // create
