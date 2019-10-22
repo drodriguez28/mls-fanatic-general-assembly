@@ -18,8 +18,7 @@ const methodOverride = require('method-override')
  *
  */
 const { soccerRouter } = require('./controllers/soccerController.js')
-
-
+const { locationRouter } = require('./controllers/locationController.js')
 /* Step 3
  *
  * Register middleware...
@@ -61,7 +60,8 @@ app.set('view engine', 'hbs')
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/', soccerRouter)
+app.use('/soccer', soccerRouter)
+app.use('/location', locationRouter)
 
 /* Step 5
  *
