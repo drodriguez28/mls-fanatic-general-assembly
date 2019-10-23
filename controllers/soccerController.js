@@ -77,7 +77,7 @@ soccerRouter.put('/:id', (req, res) => {
 })
 
 //delete soccer
-soccerRouter.delete('/soccer/:id', (req, res) => {
+soccerRouter.delete('/:id', (req, res) => {
   soccerApi.deleteSoccer(req.params.id)
     .then((deletedSoccer) => {
       //res.json(deletedSoccer)
