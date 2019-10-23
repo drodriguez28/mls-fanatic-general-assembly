@@ -6,3 +6,23 @@
 <p>state:{{singleLocation.state}}</p>
 <p>city:{{singleLocation.city}}</p>
 <p>zipcode:{{singleLocation.zipcode}}</p>
+
+
+
+{{!-- {{this thing below is DELETE }} --}}
+
+
+
+<form action="/location/{{singleLocation._id }}?_method=DELETE " method="POST">
+    <input type="submit" value="Delete Event" />
+</form>
+
+
+
+{{!-- {{this thing below is HOME }} --}}
+
+
+<a href="/soccer">
+    <button> Home </button>
+
+</a>

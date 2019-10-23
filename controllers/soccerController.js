@@ -8,12 +8,12 @@ const soccerApi = require('../models/soccerModel.js')
 const soccerRouter = express.Router()
 
 //create brother (this makes the create Soccer page)
-soccerRouter.get('/soccer/new', (req, res) => {
+soccerRouter.get('/new', (req, res) => {
   res.render('template/createSoccerForm')
 })
 
 // update brother (this makes the update Soccer)
-soccerRouter.get('/soccer/edit/:id', (req, res) => {
+soccerRouter.get('/edit/:id', (req, res) => {
   soccerApi.getSingleSoccer(req.params.id)
     .then((singleSoccer) => {
       res.render('template/editSoccerForm', { singleSoccer })
@@ -26,7 +26,7 @@ soccerRouter.get('/soccer/edit/:id', (req, res) => {
 
 //get all 
 
-soccerRouter.get('/soccer', (req, res) => {
+soccerRouter.get('/', (req, res) => {
   soccerApi.getAllSoccers()
     .then((allSoccers) => {
       console.log(allSoccers)
@@ -38,7 +38,7 @@ soccerRouter.get('/soccer', (req, res) => {
 
 
 // get one
-soccerRouter.get('/soccer/:id', (req, res) => {
+soccerRouter.get('/:id', (req, res) => {
   soccerApi.getSingleSoccer(req.params.id)
     .then((singleSoccer) => {
       // res.json(singleSoccer)
@@ -52,22 +52,22 @@ soccerRouter.get('/soccer/:id', (req, res) => {
 
 
 // create soccer 
-soccerRouter.post('/soccer', (req, res) => {
+soccerRouter.post('/', (req, res) => {
   soccerApi.createSoccer(req.body)
     .then((createdSoccer) => {
       //res.json(createdSoccer)
-      res.redirect('/soccer')
+      res.redirect('/')
 
     })
 })
-soccerRouter.get('/soccer/new', (req, res) => {
+soccerRouter.get('/new', (req, res) => {
   res.render('template/createSoccerForm')
 })
 
 
 
 // update soccer
-soccerRouter.put('/soccer/:id', (req, res) => {
+soccerRouter.put('/:id', (req, res) => {
   soccerApi.updateSoccer(req.params.id, req.body)
     .then((updatedSoccer) => {
       // res.json(updatedSoccer)

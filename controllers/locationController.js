@@ -54,7 +54,7 @@ locationRouter.post('/', (req, res) => {
 
 
 //delete location
-locationRouter.delete('/location/:id', (req, res) => {
+locationRouter.delete('/:id', (req, res) => {
     locationApi.deleteLocation(req.params.id)
       .then((deletedLocation) => {
         //res.json(deletedLocation)
