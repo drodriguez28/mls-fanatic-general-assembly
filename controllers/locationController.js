@@ -28,7 +28,7 @@ locationRouter.get('/', (req, res) => {
 
 
   // get one
-locationRouter.get('/location/:id', (req, res) => {
+locationRouter.get('/:id', (req, res) => {
     locationApi.getSingleLocation(req.params.id)
       .then((singleLocation) => {
         // res.json(singleLocation)
