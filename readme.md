@@ -1,7 +1,7 @@
 # Major League Soccer Fanatic page
 
 [MLS Fanatic Page]()
-[Github Project Board]()
+[Github Project Board]("https://git.generalassemb.ly/drodriguez28/sei24-project2/projects/2")
 
 ## Overview
 Project 2, MLS Fanatic page  
