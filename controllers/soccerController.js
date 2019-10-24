@@ -31,7 +31,7 @@ soccerRouter.get('/', (req, res) => {
     .then((allSoccers) => {
       console.log(allSoccers)
       //res.json(allSoccers)
-      res.render('template/allSoccers.hbs', { allSoccers })
+      res.render('template/allSoccers', { allSoccers })
     })
 })
 
@@ -60,9 +60,9 @@ soccerRouter.post('/', (req, res) => {
 
     })
 })
-soccerRouter.get('/new', (req, res) => {
-  res.render('template/createSoccerForm')
-})
+// soccerRouter.get('/new', (req, res) => {
+//   res.render('template/createSoccerForm')
+// })
 
 
 
