@@ -12,9 +12,11 @@ Users will be able to input their information of being a MLS fan and also is abl
 - Languages used- HTML, CSS, JavaScript, Node/Express, and Mongo/Mongoose
 - VS code
 ![wire](/wireframe.jpg)
+![erd](/erd.jpg)
 
 
 ## Future Development 
 - More questions 
 - Better CSS 
-- Scoreboard
+- more pictures 
+- better layout
