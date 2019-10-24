@@ -1,6 +1,6 @@
 # Major League Soccer Fanatic page
 
-[MLS Fanatic Page]()
+[MLS Fanatic Page]("https://cryptic-atoll-84209.herokuapp.com/soccer")
 [Github Project Board]("https://git.generalassemb.ly/drodriguez28/sei24-project2/projects/2")
 
 ## Overview
