@@ -5,12 +5,6 @@
     
 <button>create pickup game</button>
 </a>
-{{#each allLocations}}
-<a href="/location/{{_id}}">
-    <p>{{park}}</p>
-</a>
-{{/each}}
-
 {{!-- {{this thing below is HOME }} --}}
 
 
@@ -18,3 +12,10 @@
     <button> Home </button>
 
 </a>
+
+{{#each allLocations}}
+<a href="/location/{{_id}}">
+    <p>{{park}}</p>
+</a>
+{{/each}}
+
