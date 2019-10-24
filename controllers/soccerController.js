@@ -31,7 +31,7 @@ soccerRouter.get('/', (req, res) => {
     .then((allSoccers) => {
       console.log(allSoccers)
       //res.json(allSoccers)
-      res.render('template/allSoccers', { allSoccers })
+      res.render('template/allSoccers.hbs', { allSoccers })
     })
 })
 
