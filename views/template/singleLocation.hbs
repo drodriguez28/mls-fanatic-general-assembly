@@ -1,0 +1,31 @@
+<h1>{{singleLocation.park}}</h1>
+
+<p>park: {{singleLocation.park}}</p>
+<p>streetnumber:{{singleLocation.streetnumber}}</p>
+<p>streetname:{{singleLocation.streetname}}</p>
+<p>state:{{singleLocation.state}}</p>
+<p>city:{{singleLocation.city}}</p>
+<p>zipcode:{{singleLocation.zipcode}}</p>
+
+{{!-- {{this thing below is HOME }} --}}
+
+
+<a href="/soccer">
+    <button> Home </button>
+
+</a>
+
+{{!-- {{this thing below is DELETE }} --}}
+
+
+
+<form action="/location/{{singleLocation._id }}?_method=DELETE " method="POST">
+    <input type="submit" value="Delete Event" />
+</form>
+
+
+
+
+
+
+<img src="../../images/soccerball.png" alt="">

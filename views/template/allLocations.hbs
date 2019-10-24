@@ -1,0 +1,22 @@
+<h1>Pick up games around your city!</h1>
+
+
+<a href="/location/new">
+    
+<button>create pickup game</button>
+</a>
+{{!-- {{this thing below is HOME }} --}}
+
+
+<a href="/soccer">
+    <button> Home </button>
+
+</a>
+
+{{#each allLocations}}
+<a href="/location/{{_id}}">
+    <p>{{park}}</p>
+</a>
+{{/each}}
+
+<img src="../../images/men.png" alt="">
