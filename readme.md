@@ -5,7 +5,7 @@
 
 ## Overview
 Project 2, MLS Fanatic page  
-Users will be able to input 
+Users will be able to input their information of being a MLS fan and also is able to 
 
 
 ## Technologies Used 
