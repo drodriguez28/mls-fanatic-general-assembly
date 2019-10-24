@@ -56,7 +56,7 @@ soccerRouter.post('/', (req, res) => {
   soccerApi.createSoccer(req.body)
     .then((createdSoccer) => {
       //res.json(createdSoccer)
-      res.redirect('/')
+      res.redirect('/soccer')
 
     })
 })
