@@ -1,0 +1,21 @@
+<h1> MLS Soccer Teams </h1>
+
+
+<a href="/team/new">
+
+<button>create team</button>
+
+</a>
+{{!-- {{this thing below is HOME }} --}}
+
+
+<a href="/soccer">
+    <button> Home </button>
+
+</a>
+
+{{#each allTeams}}
+<a href="/team/{{_id}}">
+    <p>{{name}}</p>
+</a>
+{{/each}}

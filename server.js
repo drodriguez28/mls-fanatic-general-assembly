@@ -19,6 +19,8 @@ const methodOverride = require('method-override')
  */
 const { soccerRouter } = require('./controllers/soccerController.js')
 const { locationRouter } = require('./controllers/locationController.js')
+const { teamRouter } = require('./controllers/teamController.js')
+
 /* Step 3
  *
  * Register middleware...
@@ -62,6 +64,8 @@ app.set('view engine', 'hbs')
  */
 app.use('/soccer', soccerRouter)
 app.use('/location', locationRouter)
+app.use('/team', teamRouter)
+
 
 /* Step 5
  *

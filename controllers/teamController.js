@@ -39,7 +39,7 @@ teamRouter.get('/:id', (req, res) => {
         })
 })
 
-// create location 
+// create team
 teamRouter.post('/', (req, res) => {
     teamApi.createTeam(req.body)
         .then((createdTeam) => {
@@ -70,5 +70,5 @@ teamRouter.delete('/:id', (req, res) => {
 
 
 module.exports = {
-    locationRouter
+    teamRouter
 }

@@ -1,0 +1,25 @@
+<h1>{{singleTeam.name}}</h1>
+
+
+<p>name: {{singleTeam.name}}</p>
+<p>yearfounded: {{singleTeam.yearfounded}}</p>
+<p>titleswon: {{singleTeam.titleswon}}</p>
+
+
+{{!-- {{this thing below is HOME }} --}}
+
+
+<a href="/soccer">
+    <button> Home </button>
+
+</a>
+
+
+{{!-- {{this thing below is DELETE }} --}}
+
+
+
+<form action="/team/{{singleTeam._id }}?_method=DELETE " method="POST">
+    <input type="submit" value="Delete Event" />
+</form>
+
